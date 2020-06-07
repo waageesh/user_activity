@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+  <title>Simple API Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/static/vendors/owl-carousel//static/css/owl.carousel.min./static/css">
+  <link rel="stylesheet" href="/static/vendors/owl-carousel//static/css/owl.theme.default./static/css">
+  <link rel="stylesheet" href="/static/vendors/mdi//static/css/materialdesignicons.min./static/css">
+  <link rel="stylesheet" href="/static/vendors/aos//static/css/aos./static/css">
+  <link rel="stylesheet" href="/static/css/style.min./static/css">
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <header id="header-section">
+    <nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar">
+    <div class="container">
+      <div class="navbar-brand-wrapper d-flex w-100">
+        <img src=""images/period.jpg " alt="">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="mdi mdi-menu navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse navbar-menu-wrapper" id="navbarSupportedContent">
+        <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
+          <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
+            <div class="navbar-collapse-logo">
+              <img src="/static/images/period.svg" alt="">
+            </div>
+            <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#header-section">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#API JSON">API Response</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+  </header>
+  <div class="banner" >
+    <div class="container">
+      <h1 class="font-weight-semibold">API for JSON response of <br>activity periods of users</h1>
+      <h6 class="font-weight-normal text-muted pb-3">This is a simple template demonstrating API response of user login activities across several months</h6>
+      <img src="/static/images/Group171.svg" alt="" class="img-fluid">
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <div class="container">
+      <section class="features-overview" id="API JSON" >
+        <div class="content-header">
+          <h2>How does it works</h2>
+          <h6 class="section-subtitle text-muted">Below given are both Raw JSON and tabular format of JSON Data</h6>
+        </div>
+        <div class="d-md-flex justify-content-between">
+          <div class="grid-margin d-flex justify-content-start">
+            <div class="features-width">
+              <img src="/static/images/json.svg" alt="" class="img-icons">
+              <h5 class="py-3">JSON <br>Download</h5>
+              <p class="text-muted">Period Activity in JSON response</p>
+              <a href="https://waageesh.pythonanywhere.com/userjson"><p class="readmore-link">Click Here</p></a>
+            </div>
+          </div>
+
+          <div class="d-md-flex justify-content-between">
+            <div class="features-width">
+              <img src="/static/images/json_table.svg" alt="" class="img-icons">
+              <h5 class="py-3">Content<br>Marketing</h5>
+              <p class="text-muted">Period Activity in tabular format</p>
+              <a href="#"><p class="readmore-link">Click here</p></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features-overview" id="API JSON" >
+
+        <div class="d-md-flex justify-content-between">
+          <div class="grid-margin d-flex justify-content-start">
+            <div class="features-width">
+                  <div class="col" id = "HTMLResponse">
+                        <form id="ajax-contact" method="GET" action="userjson">
+                            <div class="field">
+                              <button type="submit">Submit to get JSON in below textbox
+                              </button>
+                            </div>
+                            <div id="ajax_result">
+                                  <textarea id="" name="" rows="20" cols="70">
+                                  {{json_resp}}
+                                  </textarea>
+                            </div>
+                        </form>
+                  </div>
+            </div>
+          </div>
+
+          <div class="d-md-flex justify-content-between">
+            <div class="features-width">
+                    <div class="row">
+                        <div class="  " id = "Json Response">
+                            <table class="table table-bordered">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">User Id</th>
+                                        <th scope="col">Real Name</th>
+                                        <th scope="col">Tz</th>
+                                        <th scope="col">Period Activity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in paginated_data %}
+                                        <tr>
+                                            <td>{{row.user_id}}</td>
+                                            <td>{{row.real_name}}</td>
+                                            <td>{{row.tz}}</td>
+                                            <td>{{row.activities}}</td>
+                                        </tr>
+                                    {%  endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  </div>
+  <script src="/static/vendors/jquery/jquery.min.js"></script>
+  <script src="/static/vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="/static/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="/static/vendors/aos/js/aos.js"></script>
+  <script src="/static/js/landingpage.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!--{ % load static % }-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>API for Useractivity</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!--bootstrap sources-->
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <!--bootstrap sources end-->
+  
+  <link rel="stylesheet" href="static/vendors/owl-carousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="static/vendors/owl-carousel/css/owl.theme.default.css">
+  <link rel="stylesheet" href="static/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="static/vendors/aos/css/aos.css">
+  <link rel="stylesheet" href="static/css/style.min.css">
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <header id="header-section">
+    <nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar">
+    <div class="container">
+      <div class="navbar-brand-wrapper d-flex w-100">
+        <img src="static/images/period.png" class="img-fluid" alt="">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="mdi mdi-menu navr-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse navbar-menu-wrapper" id="navbarSupportedContent">
+        <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
+          <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
+            <div class="navbar-collapse-logo">
+              <img src="static/images/period.png" class="img-fluid" alt="">
+            </div>
+            <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#header-section">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#API JSON">API Response</a>
+          </li>
+          </ul>
+      </div>
+    </div>
+    </nav>
+  </header>
+  <div class="banner" >
+    <div class="container">
+      <h1 class="font-weight-semibold">API for JSON response of <br>activity periods of users</h1>
+      <h6 class="font-weight-normal text-muted pb-3">This is a simple template demonstrating API response of user login activities across several months</h6>
+      <img src="static/images/Group171.svg" alt="" class="img-fluid">
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <div class="container">
+      <section class="features-overview" id="API JSON" >
+        <div class="content-header">
+          <h2>How does it works</h2>
+          <h6 class="section-subtitle text-muted">Below given are both Raw JSON and tabular format of JSON Data</h6>
+        </div>
+        <div class="d-md-flex justify-content-between">
+          <div class="grid-margin d-flex justify-content-start">
+            <div class="features-width">
+              <img src="static/images/json.png" alt="" class="img-icons">
+              <h5 class="py-3">JSON <br>Download</h5>
+              <p class="text-muted">Period Activity in JSON response</p>
+              <a href="https://waageesh.pythonanywhere.com/user"><p class="readmore-link">Click Here</p></a>
+            </div>
+          </div>
+          
+          <div class="d-md-flex justify-content-between">
+            <div class="features-width">
+              <img src="static/images/table.png" alt="" class="img-icons">
+               <h5 class="py-3">User activity in <br>Tabular Format</h5>
+              <p class="text-muted">Period Activity in tabular format</p>
+                <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#tablecollapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Cliker here to see Tabular Response
+                    </a>
+                </p>
+              <!--<a data-toggle="collapse" href="#tablecollapseExample" ><p class="readmore-link">Click here</p></a>-->
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="features-overview" id="API JSON" >
+        <!--<div class="content-header">-->
+        <!--  <h2>How does it works</h2>-->
+        <!--  <h6 class="section-subtitle text-muted">Below given are both Raw JSON and tabular format of JSON Data</h6>-->
+        <!--</div>-->
+        <div class="d-md-flex justify-content-between">
+          <div class="grid-margin d-flex justify-content-start">
+            <div class="features-width">
+                <div class="col" id = "HTMLResponse">
+                    <!--<form id="ajax-contact" method="GET" action="userjson">-->
+                        <!--<div class="field">-->
+                        <!--  <button class="btn btn-opacity-light mr-1" type="submit" onclick="jsondisp()">-->
+                        <!--      Submit to get JSON in below textbox-->
+                        <!--  </button>-->
+                        <!--</div>-->
+                        
+                        <div>
+                            <p>
+                                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Cliker here to see JSON Response
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapseExample">
+                            <!--<div class="card card-body">-->
+                            <!--    {{ pretty_json_data }}-->
+                            <!--</div>-->
+                            <textarea class="collapse" id="collapseExample" id="json" name="" rows="20" cols="50">
+                                {{ pretty_json_data }}
+                            </textarea>
+                            </div>
+                        </div>
+                        
+                        
+                        <!--<div id="ajax_result">-->
+                        <!--      <textarea id="json" name="" rows="20" cols="50" hidden>-->
+                        <!--        {{ pretty_json_data }}-->
+                        <!--      </textarea>-->
+                        <!--</div>-->
+                        
+                        
+                    <!--</form>-->
+                </div>
+            </div>
+          </div>
+          
+          <div class="grid-margin d-flex justify-content-end">
+            <div class="features-width">
+                    <div class="row">
+                        <div class="collapse" id="tablecollapseExample">
+                            <table class="table table-bordered">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">User Id</th>
+                                        <th scope="col">Real Name</th>
+                                        <th scope="col">Tz</th>
+                                        <th scope="col">Login Timings</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in list_data %}
+                                        <tr>
+                                            <td>{{row.user_id}}</td>
+                                            <td>{{row.real_name}}</td>
+                                            <td>{{row.tz}}</td>
+                                            <td>
+                                                <table>
+                                                    <th scope="col">StartTime</th>
+                                                    <th scope="col">EndTime</th>
+                                                    {% for activity in row.activities %}
+                                                <tr>
+                                                    <td>{{activity.start}}</td>
+                                                    <td>{{activity.end}}</td>                      
+                                                </tr>
+                                                {%  endfor %}                  
+                                                </table>                    
+                                            </td>
+                                            
+                                        </tr>
+                                    {%  endfor %}
+                                </tbody>
+                            </table>
+
+                            <nav aria-label="...">
+                              {% if paginated_data.has_other_pages %}
+                              <ul class="pagination">
+                                {% if paginated_data.has_previous %}
+                                    <li class="page-item">
+                                      <a class="page-link" href="?page={{ paginated_data.previous_page_number }}" tabindex="-1">Previous</a>
+                                    </li>    
+                                {% else %}
+                                    <li class="page-item disabled">
+                                        <span>Previous</span>
+                                    </li>
+                                {% endif %}
+
+                                {% for i in paginated_data.paginator.page_range %}
+                                      {% if paginated_data.number == i %}
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#">{{i}}<span class="sr-only">(current)</span></a>
+                                        </li>
+                                      {% else %}
+                                        <li>
+                                          <a class="page-link" href="?page={{ i }}">{{i}}</a>
+                                        </li>
+                                      {% endif %}
+                                {% endfor %}
+
+                                {% if paginated_data.has_next %}
+                                    <li class="page-item">
+                                    <a class="page-link" href="?page={{ paginated_data.next_page_number }}">&raquo;</a>
+                                    </li>
+                                {% else %}
+                                    <li class="disabled">
+                                    <span>&raquo;</span>
+                                    </li>
+                                {% endif %}
+                                    </ul>
+                                {% endif %}
+                            </nav>
+                        </div>
+                    </div>              
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      
+      <footer class="border-top">
+        <p class="text-center text-muted pt-4">Copyright © 2020<a href="https://www.waageesh.pythonanywhere.com/" class="px-1">APIUserActivity.</a>All rights reserved.</p>
+      </footer>
+      
+    </div>
+  </div>
+  <script src="static/vendors/jquery/jquery.min.js"></script>
+  <script src="static/vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="static/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="static/vendors/aos/js/aos.js"></script>
+  <script src="static/js/landingpage.js"></script>
+    <script>
+        function jsondisp()
+        {
+        document.getElementById("json").style.display = 'block';
+        }
+    </script>
+</body>
+</html>
